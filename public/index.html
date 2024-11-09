@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--=============== BOXICONS ===============-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <title>Responsive bottom navigation</title>
+    </head>
+    <body style="background-color: black;">
+        <!--=============== HEADER ===============-->
+        <header class="header" id="header">
+            <nav class="nav container">
+               
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link active-link">
+                                <i style="height: 50%;" class='bx bx-home-alt nav__icon'></i>
+                               
+                            </a>
+                        </li>
+                        
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">
+                                <i class='bx bx-briefcase-alt nav__icon'></i>
+                              
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="#skills" class="nav__link">
+                                <i class='bx bx-book-alt nav__icon'></i>
+                               
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="#portfolio" class="nav__link">
+                                <i class='bx bx-message-square-detail nav__icon'></i>
+                                
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="#contactme" class="nav__link">
+                                <i class='bx bx-user nav__icon'></i>
+                               
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <img src="assets/img/perfil.png" alt="" class="nav__img">
+            </nav>
+        </header>
+
+        <main>
+            <!--=============== HOME ===============-->
+            <section class="container section section__height" id="home">
+                <!DOCTYPE html>
+                <html lang="en">
+                
+                <head>
+                    <meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, user-scalable=0" />
+                    <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
+                    <link rel="stylesheet" type="text/css" href="style.css" />
+                </head>
+                
+                <body>
+                    <h1 style="color: black;"></h1>
+                    <h2 id="online-players"></h2>
+                    <h2 id="ping"></h2>
+                    <h2 id="github-link">
+                        <a href="https://github.com/pstefa1707/multiplayer-pong"></a>
+                    </h2>
+                    <div id="start-screen">
+                        
+                      
+                      <input placeholder=" accountnumber" style="border-color: white;"  id="input-gogleid" type="text" name="username" value="" />
+                        <br />
+                        <input placeholder="name" style="border-color: white;" id="input-username" type="text" name="username" value="" />
+                        <br />
+                        <input style=" background-color:black;font-size: xx-large;width: 80%;margin-top: 20%;" class="menu-button" id="set-username" onclick="setUsername();" type="submit"
+                            value="maltiplayer" />
+                        <br />
+                        <input style="background-color:black;font-size: xx-large;width: 80%;"  class="menu-button" id="singleplayer" onclick="singlePlayer();" type="submit" value="AI" />
+
+                
+                    </div>
+                    <div id="match-making" style="display: none;">
+                        <h3 style="color: white;" id="searching-for-match">Searching for Match...</h3>
+                    </div>
+                    <div id="gameover" style="display:none;width: 100%;height: 100%;background-color: black;justify-content: center;align-items: first baseline;">
+                        <h3 style="color: white;font-size: xx-large;">game over</h3>
+                       <a href="http://localhost:3000/"> <h3 style="color: red;font-size: xx-large;margin-top: 20%;">Play Again</h3></a>
+
+                    </div>
+                    <div id="gameplay" style="display: none;" onresize="fit_canvas();">
+                        <canvas id="drawing-canvas" width="600" height="500"></canvas>
+                    </div>
+                </body>
+                <script src="/jquery/dist/jquery.js"></script>
+                <script src="/socket.io/socket.io.js"></script>
+                <script src="StaticGame.js"></script>
+                <script src="Pong.js"></script>
+                <script src="client.js"></script>
+                
+                </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </section>
+
+            <!--=============== ABOUT ===============-->
+            <section class="container section section__height" id="about">
+                <a href="http://localhost:5000/buy"><input style="margin-top: 75%; background-color:black;font-size: xx-large;"  class="menu-button" id="singleplayer"  type="submit" value="open wallet" /></a>
+            </section>
+
+            <!--=============== SKILLS ===============-->
+            <section class="container section section__height" id="skills">
+                
+                
+            </section>
+
+            <!--=============== PORTFOLIO ===============-->
+            <section class="container section section__height" id="portfolio">
+                <h2 class="section__title">Portfolio</h2>
+            </section>
+
+            <!--=============== CONTACTME ===============-->
+            <section class="container section section__height" id="contactme">
+                
+                <iframe width="560" height="315" src="https://www.tiktok.com/" frameborder="0" allowfullscreen></iframe>
+        </main>
+        
+
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
